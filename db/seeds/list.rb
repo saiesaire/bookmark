@@ -1,0 +1,1 @@
+List.create(name: "紀平梨花オフィシャルサイト", url: "https://rika-kihira.amebaownd.com/", gerne: "スポーツ", reason: "尊敬する")

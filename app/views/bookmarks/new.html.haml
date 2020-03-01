@@ -1,0 +1,11 @@
+登録画面
+
+= form_with model: @list, local: true do |f|
+  = f.label "名前"
+  = f.text_area :name, placeholder: "名称"
+  = f.text_area :url, placeholder: "アドレス"
+  = f.collection_select :gerne, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンル"},{class: "button"}
+  = f.text_area :reason, placeholder: "登録理由"
+  = f.submit "登録", class: "btn"
+
+//= link_to '一覧画面に戻る', lists_index_path, class: "btn"
