@@ -9,7 +9,28 @@
     &__content{
       display: flex;
       border-bottom: solid 1px #777;
-      background-color: rgba(255,255,255,0.7)
+      background-color: rgba(255,255,255,0.8);
+      &__win-btn{
+        width: 400px;
+        border: solid 1px #000;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &__item{
+        width: 400px;
+        border: solid 1px #000;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &__number{
+        width: 100px;
+        border: solid 1px #000;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
     }
   }
   &__add{
@@ -56,5 +77,21 @@
   border: solid 2px #000;
 }
 
-.wrapper{
+.show{
+  &__window{
+    width: 1300px;
+    height: 700px;
+    border-radius: 100px;
+    background-color: rgba(255,255,255,0.9);
+    border: solid 2px #000;
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    position: fixed;
+    right: 75px;
+    bottom: 50px;
+    text-decoration: none;
+  }
 }
+
+
