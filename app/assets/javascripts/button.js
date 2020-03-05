@@ -1,0 +1,23 @@
+$(function(){
+  $(document).on("click",".js-remove-btn",function(){
+    $(".bookmark-body").css('filter','brightness(100%)');
+    $(".show__window").remove().fadeOut(700);
+  });
+  $(document).on("click",".js-expansion-btn",function(){
+    $(".show__window").css({'height':'100%','bottom':'0','width':'100%','right':'0'});
+  });
+  $(document).on("click",".js-mini-btn",function(){
+    $(".show__window").css({'height':'650','bottom':'50px','width':'1200','right':'75px'});
+  });
+
+  $(document).on("click",".js-remove-fbtn",function(){
+    $(".bookmark-body").css('filter','brightness(100%)');
+    $(".form__window").remove().fadeOut(700);
+  });
+  $(document).on("click",".js-expansion-fbtn",function(){
+    $(".form__window").css({'height':'100%','bottom':'0','width':'100%','right':'0'});
+  });
+  $(document).on("click",".js-mini-fbtn",function(){
+    $(".form__window").css({'height':'650','bottom':'50px','width':'1200','right':'75px'});
+  });
+});

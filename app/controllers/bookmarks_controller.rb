@@ -1,12 +1,16 @@
 class BookmarksController < ApplicationController
+  protect_from_forgery :except => [:create]
   def index
-    @lists = List.all
+    #@lists = List.all
+    if user_signed_in?
+      @lists = List.where(user_id: current_user.id)
+      @others = List.where.not(user_id: current_user.id)
+    else
+      @lists = []
+    end
     @gernes = Gerne.all
     gon.bookmarks = @lists
-  end
-
-  def show
-    @bookmark = List.find(params[:id])
+    gon.others = @others
   end
 
   def new
@@ -28,6 +32,6 @@ class BookmarksController < ApplicationController
 
   private
   def bookmark_params
-    params.permit(:name, :url, :gerne, :reason)
+    params.permit(:name, :url, :gerne, :reason).merge(user_id: current_user.id)
   end
 end
