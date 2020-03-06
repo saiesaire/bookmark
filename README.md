@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 
 ・機能一覧
+
 　ユーザーログイン機能
  
 　ブックマーク新規登録機能
