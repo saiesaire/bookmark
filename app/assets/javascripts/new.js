@@ -8,7 +8,6 @@ $(function(){
         <div class = "form__window__top__expansion js-expansion-fbtn"></div>
       </div>
       <form action="/bookmarks/new" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="SUAPHkqnumjEgS6ljx3GLHednUxTyAtczwsT2NbfpB0rwZekAE0Zb8bWmTaqUuFvFPtBuoTAFXzPhJJho6WCXg==">
-        <label for="名前">名前</label>
         <textarea placeholder="名称" name="name" id="name"></textarea>
         <textarea placeholder="アドレス" name="url" id="url"></textarea>
         <select class="button" name="gerne" id="gerne"><option value="">ジャンル</option>

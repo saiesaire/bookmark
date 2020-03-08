@@ -7,7 +7,7 @@ $(function(){
     $(".show__window").css({'height':'100%','bottom':'0','width':'100%','right':'0'});
   });
   $(document).on("click",".js-mini-btn",function(){
-    $(".show__window").css({'height':'650','bottom':'50px','width':'1200','right':'75px'});
+    $(".show__window").css({'height':'60%','bottom':'20%','width':'60%','right':'20%'});
   });
 
   $(document).on("click",".js-remove-fbtn",function(){
@@ -18,6 +18,6 @@ $(function(){
     $(".form__window").css({'height':'100%','bottom':'0','width':'100%','right':'0'});
   });
   $(document).on("click",".js-mini-fbtn",function(){
-    $(".form__window").css({'height':'650','bottom':'50px','width':'1200','right':'75px'});
+    $(".form__window").css({'height':'60%','bottom':'20%','width':'60%','right':'20%'});
   });
 });
