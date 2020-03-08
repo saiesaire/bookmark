@@ -52,3 +52,6 @@ production:
   database: bookmark_production
   username: bookmark
   password: <%= ENV['BOOKMARK_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
