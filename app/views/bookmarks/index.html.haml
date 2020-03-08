@@ -9,7 +9,8 @@
   - if user_signed_in?
     = link_to "ログアウト", destroy_user_session_path, method: :delete
     .new-btn ブックマーク
-
+    - @gernes.each do |gerne|
+      = gerne.gerne_name
     = form_with model: @gerne, local: true do |f|
       = f.select :gerne_name, ["プログラミング","Vtuber","ゲーム","趣味","声優","ブログ","アーティスト","スポーツ"],{prompt: "ジャンルを選んでください"},{class: "button"}
   = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
