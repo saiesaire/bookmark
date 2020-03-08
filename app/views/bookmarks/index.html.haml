@@ -11,7 +11,7 @@
     .new-btn ブックマーク
 
     = form_with model: @gerne, local: true do |f|
-      = f.select :gerne_name,  Gerne.all.map { |gerne| [gerne.gerne_name] },{prompt: "ジャンルを選んでください"},{class: "button"}
+      = f.select :gerne_name, ["プログラミング","Vtuber","ゲーム","趣味","声優","ブログ","アーティスト","スポーツ"],{prompt: "ジャンルを選んでください"},{class: "button"}
   = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
   .wall-btn 背景を変える
   - if user_signed_in?
