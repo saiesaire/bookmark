@@ -10,7 +10,7 @@
     = link_to "ログアウト", destroy_user_session_path, method: :delete
     .new-btn ブックマーク
 
-    = form_with model: @list, local: true do |f|
+    = form_with model: @gerne, local: true do |f|
       = f.select :gerne_name,  Gerne.all.map { |gerne| [gerne.gerne_name] },{prompt: "ジャンルを選んでください"},{class: "button"}
   = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
   .wall-btn 背景を変える
