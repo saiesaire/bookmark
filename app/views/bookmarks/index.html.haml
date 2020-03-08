@@ -5,14 +5,13 @@
     %p 思考は忘却で妨げられる
     %p 全てを記憶してくれる友がいれば
     %p 人はより深く思考できるようになる
-.wrapper
 .bookmark-body
   - if user_signed_in?
     = link_to "ログアウト", destroy_user_session_path, method: :delete
     .new-btn ブックマーク
 
     = form_with model: @list, local: true do |f|
-      = f.collection_select :gerne_name, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンルを選んでください"},{class: "button"}
+      = f.select :gerne_name,  Gerne.all.map { |gerne| [gerne.gerne_name] },{prompt: "ジャンルを選んでください"},{class: "button"}
   = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
   .wall-btn 背景を変える
   - if user_signed_in?
