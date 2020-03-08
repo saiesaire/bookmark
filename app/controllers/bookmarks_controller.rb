@@ -1,12 +1,10 @@
 class BookmarksController < ApplicationController
   protect_from_forgery :except => [:create]
   def index
-    #@lists = List.all
+    @seeds = User.all
     if user_signed_in?
       @lists = List.where(user_id: current_user.id)
       @others = List.where.not(user_id: current_user.id)
-    else
-      @lists = []
     end
     @gernes = Gerne.all
     gon.bookmarks = @lists

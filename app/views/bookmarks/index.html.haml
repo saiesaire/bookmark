@@ -9,42 +9,45 @@
 .bookmark-body
   - if user_signed_in?
     = link_to "ログアウト", destroy_user_session_path, method: :delete
+    .new-btn ブックマーク
+
+    = form_with model: @list, local: true do |f|
+      = f.collection_select :gerne_name, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンルを選んでください"},{class: "button"}
+  = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
+  .wall-btn 背景を変える
+  - if user_signed_in?
+    .bookmark-body__table
+      .bookmark-body__table__content1
+        .bookmark-body__table__content1__item
+          サイト名
+        .bookmark-body__table__content1__item
+          アドレス
+        .bookmark-body__table__content1__item
+          ジャンル
+        .bookmark-body__table__content1__item
+          登録した理由
+        .bookmark-body__table__content1__item
+          作成年月日
+      - i = 0
+      - @lists.each do |list|
+        .bookmark-body__table__content
+          .bookmark-body__table__content__win-btn{id: i}
+            = list.name
+          .bookmark-body__table__content__item
+            = link_to "#{list.url}", list.url, target: :_blank
+          .bookmark-body__table__content__item
+            = list.gerne
+          .bookmark-body__table__content__item
+            = list.reason
+          .bookmark-body__table__content__item
+            = list.created_at.to_s(:datetime_jp)
+          //= link_to '編集', edit_bookmark_path(), class: "btn"
+          //= link_to '削除', list, method: :delete
+        - i += 1
   - else
+    .login-logo まずは登録から！
     = link_to "ログイン", new_user_session_path, class: 'post'
     = link_to "新規登録", new_user_registration_path, class: 'post'
-
-  = form_with model: @list, local: true do |f|
-    = f.collection_select :gerne_name, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンルを選んでください"},{class: "button"}
-  = text_area "object_name", {class: "wall-url"},{id: "wall-url"}
-  .wall-btn 画像！
-  .new-btn ブックマーク
-  .bookmark-body__table
-    .bookmark-body__table__content1
-      .bookmark-body__table__content1__item
-        サイト名
-      .bookmark-body__table__content1__item
-        アドレス
-      .bookmark-body__table__content1__item
-        ジャンル
-      .bookmark-body__table__content1__item
-        登録した理由
-      .bookmark-body__table__content1__item
-        作成年月日
-    - i = 0
-    - @lists.each do |list|
-      .bookmark-body__table__content
-        .bookmark-body__table__content__win-btn{id: i}
-          = list.name
-        .bookmark-body__table__content__item
-          = link_to "#{list.url}", list.url, target: :_blank
-        .bookmark-body__table__content__item
-          = list.gerne
-        .bookmark-body__table__content__item
-          = list.reason
-        .bookmark-body__table__content__item
-          = list.created_at.to_s(:datetime_jp)
-        //= link_to '編集', edit_bookmark_path(), class: "btn"
-        //= link_to '削除', list, method: :delete
-      - i += 1
 .show
 .form
+.footer

@@ -1,7 +1,7 @@
 .bookmark-body{
-  background-image: url("index-wall.jpg");
+  background-color: #014;
   background-size: 100%;
-  height: calc(100vh - 100px);
+  height: 100vh;
   margin-top: 100px;
   &__table{
     border: solid 1px #000;
@@ -34,7 +34,9 @@
       }
     }
     &__content:hover{
-      background-color: #F99;
+      background-color: #000;
+      font-size: 18px;
+      color: #FFF;
       font-weight: bold;
     }
     &__content1{

@@ -45,7 +45,6 @@ $(function(){
 
   $(".wall-btn").on("click",function(){
     var image = $("#wall-url").val();
-    console.log(image);
     $(".bookmark-body").css('backgroundImage',`url("${image}")`);
   })
   

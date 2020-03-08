@@ -1,0 +1,2 @@
+User.create(email: "rozenkreuz1126@gmail.com", encrypted_password: "$2a$11$sB3lhASySVj09p5W8zF7U.OxSTwKlVWQgxT4OwTIqJ1JPwPA0FzPi",created_at: "2020-03-05 22:04:50 +0900,updated_at: "2020-03-05 22:05:41 +0900)
+User.create(email: "ttt@ttt", encrypted_password: "$2a$11$2inxlLFdDPYgIDLmW6bnY.KwKreRivkAt019irZU46m2v4RkSMK4.",created_at: "2020-03-05 22:06:17 +0900,updated_at: "2020-03-05 22:06:17 +0900
