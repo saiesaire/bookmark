@@ -11,20 +11,24 @@ $(function(){
         <textarea placeholder="名称" name="name" id="name"></textarea>
         <textarea placeholder="アドレス" name="url" id="url"></textarea>
         <select class="button" name="gerne" id="gerne"><option value="">ジャンル</option>
-          <option value="プログラミング">プログラミング</option>
-          <option value="ゲーム">ゲーム</option>
-          <option value="趣味">趣味</option>
-          <option value="声優">声優</option>
-          <option value="ブログ">ブログ</option>
-          <option value="アーティスト">アーティスト</option>
-          <option value="スポーツ">スポーツ</option>
-          <option value="Vtuber">Vtuber</option>
+          <option value="${gon.gernes[0].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[1].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[2].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[3].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[4].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[5].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[6].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[7].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[8].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[9].gerne_name}">${gon.gernes[0].gerne_name}</option>
+
         </select>
         <textarea placeholder="登録理由" name="reason" id="reason"></textarea>
         <input type="submit" name="commit" value="登録" class="btn" data-disable-with="登録">
         </form>
       </div>
     `
+
     $(".form").append(form).hide().fadeIn(300);
   })
 });

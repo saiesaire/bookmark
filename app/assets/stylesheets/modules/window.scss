@@ -20,15 +20,15 @@
   top: 33%;
   left: 33%;
   z-index: 0;
-  -ms-filter: blur(6px);
-  filter: blur(6px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
 }
 
 .menu{
   position: relative;
   z-index: 1;
 }
-#wall-url{
+#wall-url,.wall-btn{
   position: relative;
   z-index: 1;
 }

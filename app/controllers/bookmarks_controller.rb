@@ -9,6 +9,7 @@ class BookmarksController < ApplicationController
     @gernes = Gerne.all
     gon.bookmarks = @lists
     gon.others = @others
+    gon.gernes = @gernes
   end
 
   def new
