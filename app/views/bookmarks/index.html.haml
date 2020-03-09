@@ -7,10 +7,11 @@
     %p 人はより深く思考できるようになる
 .bookmark-body
   - if user_signed_in?
-    = link_to "ログアウト", destroy_user_session_path, method: :delete
-    .new-btn ブックマーク
-    = form_with model: @list, local: true do |f|
-      = f.collection_select :gerne_name, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンルを選んでください"},{class: "button"}
+    .menu
+      = link_to "ログアウト", destroy_user_session_path, method: :delete
+      .new-btn ブックマーク
+      = form_with model: @list, local: true do |f|
+        = f.collection_select :gerne_name, @gernes,:gerne_name,:gerne_name,{prompt: "ジャンルを選んでください"},{class: "button"}
   = text_area "object_name",{class: "wall-url"},{id: "wall-url"}
   .wall-btn 背景を変える
   - if user_signed_in?
@@ -46,6 +47,19 @@
     .login-logo まずは登録から！
     = link_to "ログイン", new_user_session_path, class: 'post'
     = link_to "新規登録", new_user_registration_path, class: 'post'
+- number = rand(100..200)
+- color  = ["red","blue","green","yellow","purple","white","pink","orange"]
+.stars
+  - number.times do
+    - top   = rand(100)
+    - left   = rand(100)
+    - size = rand(10..20)
+    - cnum = rand(0..7)
+    .star{style: "top: #{top}%; left: #{left}%; height: #{size}px; width: #{size}px; background-color: #{color[cnum]}"}
+- sun_top = rand(20..80)
+- sun_left = rand(20..80)
+- sun_color = rand(0..7)
+.sun{style: "top: #{sun_top}%; left: #{sun_left}%; background-color: #{color[sun_color]}"}
 .show
 .form
 .footer

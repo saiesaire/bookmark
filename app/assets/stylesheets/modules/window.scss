@@ -1,3 +1,39 @@
+.star{
+  background-color: #FF0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  z-index: 0;
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+.sun{
+  background-color: #0aF;
+  height: 34vh;
+  width: 34vh;
+  border-radius: 50%;
+  position: fixed;
+  top: 33%;
+  left: 33%;
+  z-index: 0;
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+.menu{
+  position: relative;
+  z-index: 1;
+}
+#wall-url{
+  position: relative;
+  z-index: 1;
+}
+
+
 .show{
   &__window{
     width: 60%;
@@ -14,7 +50,7 @@
     right: 20%;
     bottom: 20%;
     text-decoration: none;
-    z-index: 2;
+    z-index: 3;
     &__top{
       display: flex;
       height: 40px;
