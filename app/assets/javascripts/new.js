@@ -12,15 +12,15 @@ $(function(){
         <textarea placeholder="アドレス" name="url" id="url"></textarea>
         <select class="button" name="gerne" id="gerne"><option value="">ジャンル</option>
           <option value="${gon.gernes[0].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[1].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[2].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[3].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[4].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[5].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[6].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[7].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[8].gerne_name}">${gon.gernes[0].gerne_name}</option>
-          <option value="${gon.gernes[9].gerne_name}">${gon.gernes[0].gerne_name}</option>
+          <option value="${gon.gernes[1].gerne_name}">${gon.gernes[1].gerne_name}</option>
+          <option value="${gon.gernes[2].gerne_name}">${gon.gernes[2].gerne_name}</option>
+          <option value="${gon.gernes[3].gerne_name}">${gon.gernes[3].gerne_name}</option>
+          <option value="${gon.gernes[4].gerne_name}">${gon.gernes[4].gerne_name}</option>
+          <option value="${gon.gernes[5].gerne_name}">${gon.gernes[5].gerne_name}</option>
+          <option value="${gon.gernes[6].gerne_name}">${gon.gernes[6].gerne_name}</option>
+          <option value="${gon.gernes[7].gerne_name}">${gon.gernes[7].gerne_name}</option>
+          <option value="${gon.gernes[8].gerne_name}">${gon.gernes[8].gerne_name}</option>
+          <option value="${gon.gernes[9].gerne_name}">${gon.gernes[9].gerne_name}</option>
 
         </select>
         <textarea placeholder="登録理由" name="reason" id="reason"></textarea>
