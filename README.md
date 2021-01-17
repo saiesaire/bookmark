@@ -23,6 +23,16 @@ Things you may want to cover:
 
 * ...
 
+・仕様言語
+　
+ Ruby on rails
+ 
+ JavaScript（jQuery)
+ 
+ Haml
+ 
+ SCSS
+
 ・機能一覧
 
 　ユーザーログイン機能
